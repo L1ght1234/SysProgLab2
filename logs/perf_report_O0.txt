@@ -1,0 +1,54 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 5K of event 'cpu/cycles/P'
+# Event count (approx.): 25303697558
+#
+# Overhead  Command  Shared Object         Symbol                                                                                 
+# ........  .......  ....................  .......................................................................................
+#
+    47.26%  prog_O0  prog_O0               [.] conditional_filter(float const*, float const*, unsigned long, float)
+            |
+            ---conditional_filter(float const*, float const*, unsigned long, float)
+               run_workload(unsigned long, int)
+               main
+               0x72389242a601
+               __libc_start_main
+               _start
+
+    43.45%  prog_O0  prog_O0               [.] poly_step(float, float, float)
+            |
+            ---poly_step(float, float, float)
+               |          
+                --43.31%--compute_polynomial(float*, float const*, float const*, unsigned long)
+                          run_workload(unsigned long, int)
+                          main
+                          0x72389242a601
+                          __libc_start_main
+                          _start
+
+     9.17%  prog_O0  prog_O0               [.] compute_polynomial(float*, float const*, float const*, unsigned long)
+            |
+            ---compute_polynomial(float*, float const*, float const*, unsigned long)
+               run_workload(unsigned long, int)
+               main
+               0x72389242a601
+               __libc_start_main
+               _start
+
+     0.02%  prog_O0  [unknown]             [k] 0xffffffffa733507a
+     0.02%  prog_O0  [unknown]             [k] 0xffffffffa73d8674
+     0.02%  prog_O0  [unknown]             [k] 0xffffffffa839c644
+     0.02%  prog_O0  [unknown]             [k] 0xffffffffa73f6b1d
+     0.02%  prog_O0  prog_O0               [.] float* std::vector<float, std::allocator<float> >::_M_data_ptr<float>(float*) const
+     0.02%  prog_O0  [unknown]             [k] 0xffffffffa73351a2
+     0.01%  prog_O0  ld-linux-x86-64.so.2  [.] 0x0000000000010f92
+     0.00%  prog_O0  [unknown]             [k] 0xffffffffa76d08a4
+     0.00%  perf-ex  [unknown]             [k] 0xffffffffa72161ec
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

@@ -1,0 +1,28 @@
+======================================================================
+ENERGY CONSUMPTION REPORT (RAPL / Idle Baseline Subtraction Model)
+Methodology: Luis Cruz (2021) - Measuring Energy in Software
+Platform: AMD AM5 (ASUS PRIME B650M-R) / Linux WSL2
+======================================================================
+
+1. Baseline Parameters:
+   - Idle System Power (P_idle)       : 20.00 W
+   - Load Power - prog_O0 (P_load)    : 46.50 W (Freq: ~4.9 GHz)
+   - Load Power - prog_O3 (P_load)    : 45.00 W (Freq: ~4.8 GHz)
+
+2. Execution Time (Wall-clock):
+   - prog_O0                          : 5.079 s
+   - prog_O3                          : 0.915 s
+   - Speedup factor                   : 5.55x
+
+3. System Energy Consumption (Point 3.1):
+   - Formula: E_sys = P_load * T
+   - prog_O0 (System total)           : 236.17 Joules
+   - prog_O3 (System total)           : 41.18 Joules
+   - System Energy Saved              : 195.00 J (82.6% reduction)
+
+4. Isolated Program Energy Consumption (Point 3.2):
+   - Formula: E_prog = (P_load - P_idle) * T
+   - prog_O0 (Dynamic process only)   : 134.59 Joules
+   - prog_O3 (Dynamic process only)   : 22.88 Joules
+   - Program Energy Saved             : 111.72 J (83.0% reduction)
+======================================================================

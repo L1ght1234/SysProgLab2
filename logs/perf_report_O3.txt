@@ -1,0 +1,47 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 929  of event 'cpu/cycles/P'
+# Event count (approx.): 4424051023
+#
+# Overhead  Command  Shared Object         Symbol                                                                   
+# ........  .......  ....................  .........................................................................
+#
+    89.80%  prog_O3  prog_O3               [.] conditional_filter(float const*, float const*, unsigned long, float)
+            |
+            ---conditional_filter(float const*, float const*, unsigned long, float)
+               std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (inlined)
+               main
+               0x7ab37382a601
+               __libc_start_main
+               _start
+
+     9.94%  prog_O3  prog_O3               [.] compute_polynomial(float*, float const*, float const*, unsigned long)
+            |          
+            |--7.37%--compute_polynomial(float*, float const*, float const*, unsigned long)
+            |          std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (inlined)
+            |          main
+            |          0x7ab37382a601
+            |          __libc_start_main
+            |          _start
+            |          
+             --2.57%--poly_step(float, float, float) (inlined)
+                       compute_polynomial(float*, float const*, float const*, unsigned long)
+                       std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (inlined)
+                       main
+                       0x7ab37382a601
+                       __libc_start_main
+                       _start
+
+     0.11%  prog_O3  [unknown]             [k] 0xffffffffa7104104
+     0.11%  prog_O3  [unknown]             [k] 0xffffffffa73d3cb2
+     0.05%  prog_O3  ld-linux-x86-64.so.2  [.] 0x000000000000c6ee
+     0.00%  prog_O3  [unknown]             [k] 0xffffffffa837748e
+     0.00%  perf-ex  [unknown]             [k] 0xffffffffa72161ff
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

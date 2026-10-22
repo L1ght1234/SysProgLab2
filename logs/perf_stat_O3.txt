@@ -1,0 +1,22 @@
+Starting benchmark...
+Done. Checksum: 1.89226e+09
+
+ Performance counter stats for './prog_O3':
+
+                 2      context-switches                 #      2.2 cs/sec  cs_per_second     
+                 0      cpu-migrations                   #      0.0 migrations/sec  migrations_per_second
+               338      page-faults                      #    369.5 faults/sec  page_faults_per_second
+            914.75 msec task-clock                       #      1.0 CPUs  CPUs_utilized       
+         311938536      L1-dcache-load-misses            #     12.4 %  l1d_miss_rate            (42.36%)
+            311471      branch-misses                    #      0.0 %  branch_miss_rate         (42.79%)
+        2027849441      branches                         #   2216.8 M/sec  branch_frequency     (57.22%)
+        4384430767      cpu-cycles                       #      4.8 GHz  cycles_frequency       (57.64%)
+        8491440187      instructions                     #      1.9 instructions  insn_per_cycle  (57.64%)
+           9371475      stalled-cycles-frontend          #     0.00 frontend_cycles_idle        (57.21%)
+
+       0.915265885 seconds time elapsed
+
+       0.911652000 seconds user
+       0.000000000 seconds sys
+
+

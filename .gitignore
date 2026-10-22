@@ -1,0 +1,6 @@
+prog_O0
+prog_O3
+*.data
+*.data.old
+*.folded
+FlameGraph/
